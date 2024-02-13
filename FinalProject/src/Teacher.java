@@ -2,6 +2,10 @@ public class Teacher {
     protected String name;
     protected double salary;
 
+    public Teacher(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
