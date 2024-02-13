@@ -9,6 +9,6 @@ public class FullTimeTeacher extends Teacher implements Salary {
 
     @Override
     public double calculateSalary() {
-        return Salary.baseSalary * multiplier;
+        return Salary.baseSalary * (yearsOfExperience * multiplier);
     }
 }
