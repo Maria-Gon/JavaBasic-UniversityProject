@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Menu {
-    public static void VirtualUniversity_() {
+    public static void VirtualUniversity() {
         University university = new University();
         Scanner scan = new Scanner(System.in);
 
