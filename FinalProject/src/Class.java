@@ -4,6 +4,6 @@ public class Class {
     private String name;
     private String classroom;
     private List<Student> students;
-    private List<Teacher> teachers;
+    private Teacher teacher;
     private int duration;
 }
