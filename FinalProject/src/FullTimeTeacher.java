@@ -11,4 +11,8 @@ public class FullTimeTeacher extends Teacher implements Salary {
     public double calculateSalary() {
         return Salary.baseSalary * (yearsOfExperience * multiplier);
     }
+
+    public int getYearsOfExperience() {
+        return yearsOfExperience;
+    }
 }
