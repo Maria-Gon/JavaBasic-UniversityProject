@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="df91e3aa-49bf-4ee5-940b-00d505c23dab" name="Changes" comment="Add: UML initial version">
+      <change beforePath="$PROJECT_DIR$/FinalProject/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalProject/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalProject/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalProject/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalProject/FinalProject.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalProject/docs/University - UML.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalProject/src/Main.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2cHkGTFNe8MX9BuUWXgg8OcBEVM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feature/classes-and-attributes",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-15.0.2-corretto-15.0.2-4caba194b151-4a35e930" />
+        <option value="jdk-17.0.10-corretto-17.0.10-3183f394aec4-96c0d24d" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="df91e3aa-49bf-4ee5-940b-00d505c23dab" name="Changes" comment="" />
+      <created>1707775796086</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707775796086</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Add: Initial project">
+      <option name="closed" value="true" />
+      <created>1707776150637</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707776150637</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add: UML initial version">
+      <option name="closed" value="true" />
+      <created>1707776343614</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707776343614</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add: Initial project" />
+    <MESSAGE value="Add: UML initial version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add: UML initial version" />
+  </component>
+</project>
