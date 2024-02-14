@@ -16,6 +16,10 @@ public class University {
         teachers.add(teacher);
     }
 
+    public void addStudent(Student student){
+        students.add(student);
+    }
+
     public void printAllTeachers(){
         System.out.println("****************************************");
         for(Teacher teacher : teachers){
