@@ -28,6 +28,10 @@ public class University {
         return students.get(index);
     }
 
+    public void addClass(Class course){
+        classes.add(course);
+    }
+
     public void printAllTeachers(){
         System.out.println("****************************************");
         for(Teacher teacher : teachers){
