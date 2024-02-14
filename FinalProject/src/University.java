@@ -56,6 +56,16 @@ public class University {
         System.out.println("****************************************");
     }
 
+    public void printClassesName(){
+        System.out.println("****************************************");
+        int i = 1;
+        for(Class course : classes){
+            System.out.println("\n"+ (i) + ". "+"Name: " + course.getName());
+            i++;
+        }
+        System.out.println("****************************************");
+    }
+
     public void printAllClasses(){
         System.out.println("****************************************");
         int i = 1;
