@@ -47,4 +47,17 @@ public class University {
         }
         System.out.println("****************************************");
     }
+
+    public void printAllClasses(){
+        System.out.println("****************************************");
+        int i = 1;
+        for(Class course : classes){
+            System.out.println("\n"+ (i+1) + ". "+"Name: " + course.getName());
+            System.out.println("Classroom: " + course.getClassroom());
+            System.out.println("Duration: " + course.getDuration());
+            System.out.println("Teacher: " + course.getDuration());
+            i++;
+        }
+        System.out.println("****************************************");
+    }
 }
