@@ -22,4 +22,20 @@ public class Class {
     public void addStudent(Student student) {
         students.add(student);
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getClassroom() {
+        return classroom;
+    }
+
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
 }
