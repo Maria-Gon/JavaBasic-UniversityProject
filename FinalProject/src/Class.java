@@ -23,6 +23,15 @@ public class Class {
         students.add(student);
     }
 
+    public boolean validateStudentInClass (int id) {
+        for (Student student : students) {
+            if (student.getId() == id) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public String getName() {
         return name;
     }

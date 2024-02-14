@@ -32,16 +32,39 @@ public class University {
         classes.add(course);
     }
 
+    public Class getClass(int index){
+        return classes.get(index);
+    }
+
+    public int getNumberOfClasses() {
+        return classes.size();
+    }
+
     public void printAllTeachers(){
         System.out.println("****************************************");
+        int i = 1;
         for(Teacher teacher : teachers){
-            System.out.println("\nName: " + teacher.getName());
+            System.out.println("\n"+ (i) + ". "+"Name: " + teacher.getName());
             System.out.println("Salary: " + teacher.getSalary());
             if (teacher instanceof FullTimeTeacher){
                 System.out.println("Years of experience: " + ((FullTimeTeacher) teacher).getYearsOfExperience());
             } else if (teacher instanceof PartTimeTeacher){
                 System.out.println("Active hours per week: " + ((PartTimeTeacher) teacher).getActiveHoursPerWeek());
             }
+            i++;
+        }
+        System.out.println("****************************************");
+    }
+
+    public void printAllClasses(){
+        System.out.println("****************************************");
+        int i = 1;
+        for(Class course : classes){
+            System.out.println("\n"+ (i) + ". "+"Name: " + course.getName());
+            System.out.println("Classroom: " + course.getClassroom());
+            System.out.println("Duration: " + course.getDuration());
+            System.out.println("Teacher: " + course.getTeacher().getName());
+            i++;
         }
         System.out.println("****************************************");
     }
