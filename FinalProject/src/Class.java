@@ -12,4 +12,8 @@ public class Class {
         this.classroom = classroom;
         this.duration = duration;
     }
+
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
+    }
 }
