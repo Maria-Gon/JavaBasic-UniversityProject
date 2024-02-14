@@ -16,6 +16,10 @@ public class University {
         teachers.add(teacher);
     }
 
+    public Teacher getTeacher(int index) {
+        return teachers.get(index);
+    }
+
     public void addStudent(Student student){
         students.add(student);
     }
