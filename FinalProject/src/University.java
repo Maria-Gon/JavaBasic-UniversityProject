@@ -20,6 +20,10 @@ public class University {
         students.add(student);
     }
 
+    public Student getStudent(int index){
+        return students.get(index);
+    }
+
     public void printAllTeachers(){
         System.out.println("****************************************");
         for(Teacher teacher : teachers){
