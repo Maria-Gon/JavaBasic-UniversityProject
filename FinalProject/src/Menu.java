@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Menu {
     private static University university = new University();
+    private static Scanner scan = new Scanner(System.in);
     public static void VirtualUniversity() {
 
         //Initialize 2 teachers of each type
@@ -14,9 +15,9 @@ public class Menu {
         initializeClasses();
 
         //************************************************************
-        Scanner scan = new Scanner(System.in);
         System.out.println("Welcome to the university!");
 
+        int code = 2024121146;
         boolean running = true;
         while (running) {
             System.out.println("\nWhat option would you like to do today? (Please enter the corresponding number)" +
@@ -35,6 +36,8 @@ public class Menu {
                 case "2":
                     break;
                 case "3":
+                    option3(code);
+                    code++;
                     break;
                 case "4":
                     break;
@@ -125,5 +128,49 @@ public class Menu {
     }
     private static void option1(){
         university.printAllTeachers();
+    }
+
+    private static void option3(int code) {
+        //get the student info
+        System.out.println("Please enter the student name: ");
+        String name = scan.nextLine();
+        System.out.println("Please enter the student age: ");
+        String ageInput = scan.nextLine();
+        int age = 0;
+        if (ageInput.matches("^\\d+$")) {
+            age = Integer.parseInt(ageInput);
+        } else {
+            System.out.println("Invalid age. Please try again");
+            return;
+        }
+
+        Student student = new Student(code, name, age);
+
+        //print all the classes in the university
+        university.printAllClasses();
+        System.out.println("Please enter the number corresponding to the class in which you wish to enroll the student:  ");
+        String classInput = scan.nextLine();
+        int index = 0;
+        if (classInput.matches("^\\d+$")) {
+            index = Integer.parseInt(classInput);
+            if(index >= university.getNumberOfClasses()){
+                System.out.println("Invalid number. Please try again");
+                return;
+            }
+        } else {
+            System.out.println("Invalid number. Please try again");
+            return;
+        }
+
+        Class course = university.getClass(index);
+
+        //Validate if student is in the class
+        boolean isInClass = course.validateStudentInClass(student.getId());
+        if(!isInClass) {
+            course.addStudent(student);
+            System.out.println("The student was added correctly.");
+        }else {
+            System.out.println("Sorry the student is already in this class. Please try again");
+        }
     }
 }
