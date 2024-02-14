@@ -7,6 +7,9 @@ public class Menu {
         //Initialize 2 teachers of each type
         initializeTeachers();
 
+        //Initialize 6 different students
+        initializeStudents();
+
         //************************************************************
         Scanner scan = new Scanner(System.in);
         System.out.println("Welcome to the university!");
@@ -65,6 +68,26 @@ public class Menu {
         double salaryPartTimeTeacher2 = partTimeTeacher2.calculateSalary();
         partTimeTeacher2.setSalary(salaryPartTimeTeacher2);
         university.addTeacher(partTimeTeacher2);
+    }
+
+    private static void initializeStudents(){
+        Student student1 = new Student(202412131, "Juan Rodriguez",17);
+        university.addStudent(student1);
+
+        Student student2 = new Student(202412141, "Sophia Cortez",19);
+        university.addStudent(student2);
+
+        Student student3 = new Student(202412142, "Julianna Yanqueen",16);
+        university.addStudent(student3);
+
+        Student student4 = new Student(2024121143, "Mario Hernandez",18);
+        university.addStudent(student4);
+
+        Student student5 = new Student(2024121144, "Felipe Ortega",19);
+        university.addStudent(student5);
+
+        Student student6 = new Student(2024121145, "Camille Villegas",18);
+        university.addStudent(student6);
     }
     private static void option1(){
         university.printAllTeachers();
