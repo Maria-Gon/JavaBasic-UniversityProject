@@ -10,6 +10,9 @@ public class Menu {
         //Initialize 6 different students
         initializeStudents();
 
+        //Initialize 4 different classes
+        initializeClasses();
+
         //************************************************************
         Scanner scan = new Scanner(System.in);
         System.out.println("Welcome to the university!");
@@ -88,6 +91,37 @@ public class Menu {
 
         Student student6 = new Student(2024121145, "Camille Villegas",18);
         university.addStudent(student6);
+    }
+
+    private static void initializeClasses(){
+        Class class1 = new Class("Math", "ML-1001", 2);
+        class1.addStudent(university.getStudent(0));
+        class1.addStudent(university.getStudent(1));
+        class1.addStudent(university.getStudent(2));
+        class1.setTeacher(university.getTeacher(1));
+        university.addClass(class1);
+
+        Class class2 = new Class("English", "B-3002", 3);
+        class2.addStudent(university.getStudent(5));
+        class2.addStudent(university.getStudent(4));
+        class2.addStudent(university.getStudent(3));
+        class2.setTeacher(university.getTeacher(2));
+        university.addClass(class2);
+
+        Class class3 = new Class("History", "C-2015", 1);
+        class3.addStudent(university.getStudent(0));
+        class3.addStudent(university.getStudent(2));
+        class3.addStudent(university.getStudent(4));
+        class3.setTeacher(university.getTeacher(3));
+        university.addClass(class3);
+
+        Class class4 = new Class("Spanish", "C-1009", 3);
+        class4.addStudent(university.getStudent(1));
+        class4.addStudent(university.getStudent(3));
+        class4.addStudent(university.getStudent(5));
+        class4.setTeacher(university.getTeacher(0));
+        university.addClass(class4);
+
     }
     private static void option1(){
         university.printAllTeachers();
