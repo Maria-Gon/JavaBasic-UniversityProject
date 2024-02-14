@@ -40,7 +40,7 @@ public class University {
         System.out.println("****************************************");
         int i = 1;
         for(Teacher teacher : teachers){
-            System.out.println("\n"+ (i+1) + ". "+"Name: " + teacher.getName());
+            System.out.println("\n"+ (i) + ". "+"Name: " + teacher.getName());
             System.out.println("Salary: " + teacher.getSalary());
             if (teacher instanceof FullTimeTeacher){
                 System.out.println("Years of experience: " + ((FullTimeTeacher) teacher).getYearsOfExperience());
@@ -56,10 +56,10 @@ public class University {
         System.out.println("****************************************");
         int i = 1;
         for(Class course : classes){
-            System.out.println("\n"+ (i+1) + ". "+"Name: " + course.getName());
+            System.out.println("\n"+ (i) + ". "+"Name: " + course.getName());
             System.out.println("Classroom: " + course.getClassroom());
             System.out.println("Duration: " + course.getDuration());
-            System.out.println("Teacher: " + course.getDuration());
+            System.out.println("Teacher: " + course.getTeacher().getName());
             i++;
         }
         System.out.println("****************************************");
