@@ -42,6 +42,7 @@ public class Menu {
                 case "4":
                     break;
                 case "5":
+                    option5();
                     break;
                 case "6":
                     running = false;
@@ -172,5 +173,17 @@ public class Menu {
         }else {
             System.out.println("Sorry the student is already in this class. Please try again");
         }
+    }
+    private static void option5(){
+        System.out.println("Please enter the student id: ");
+        String idInput = scan.nextLine();
+        int id = 0;
+        if (idInput.matches("^\\d+$")) {
+            id = Integer.parseInt(idInput);
+        } else {
+            System.out.println("Invalid id. Please try again");
+            return;
+        }
+        university.printClassesByStudent(id);
     }
 }

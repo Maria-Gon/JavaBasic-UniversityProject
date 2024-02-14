@@ -68,4 +68,19 @@ public class University {
         }
         System.out.println("****************************************");
     }
+
+    public void printClassesByStudent(int id){
+        System.out.println("****************************************");
+        int i = 1;
+        for(Class course : classes){
+            if (course.validateStudentInClass(id)){
+                System.out.println("\n"+ (i) + ". "+"Name: " + course.getName());
+                System.out.println("Classroom: " + course.getClassroom());
+                System.out.println("Duration: " + course.getDuration());
+                System.out.println("Teacher: " + course.getTeacher().getName());
+                i++;
+            }
+        }
+        System.out.println("****************************************");
+    }
 }
