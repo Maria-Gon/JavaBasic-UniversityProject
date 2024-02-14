@@ -24,6 +24,7 @@ public class Menu {
 
             switch (option) {
                 case "1":
+                    option1();
                     break;
                 case "2":
                     break;
@@ -65,5 +66,7 @@ public class Menu {
         partTimeTeacher2.setSalary(salaryPartTimeTeacher2);
         university.addTeacher(partTimeTeacher2);
     }
-
+    private static void option1(){
+        university.printAllTeachers();
+    }
 }
