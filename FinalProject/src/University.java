@@ -36,6 +36,10 @@ public class University {
         return classes.get(index);
     }
 
+    public int getNumberOfClasses() {
+        return classes.size();
+    }
+
     public void printAllTeachers(){
         System.out.println("****************************************");
         int i = 1;
