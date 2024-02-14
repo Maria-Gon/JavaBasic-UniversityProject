@@ -34,14 +34,16 @@ public class University {
 
     public void printAllTeachers(){
         System.out.println("****************************************");
+        int i = 1;
         for(Teacher teacher : teachers){
-            System.out.println("\nName: " + teacher.getName());
+            System.out.println("\n"+ (i+1) + ". "+"Name: " + teacher.getName());
             System.out.println("Salary: " + teacher.getSalary());
             if (teacher instanceof FullTimeTeacher){
                 System.out.println("Years of experience: " + ((FullTimeTeacher) teacher).getYearsOfExperience());
             } else if (teacher instanceof PartTimeTeacher){
                 System.out.println("Active hours per week: " + ((PartTimeTeacher) teacher).getActiveHoursPerWeek());
             }
+            i++;
         }
         System.out.println("****************************************");
     }
