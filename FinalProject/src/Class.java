@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Class {
@@ -11,6 +12,7 @@ public class Class {
         this.name = name;
         this.classroom = classroom;
         this.duration = duration;
+        this.students = new ArrayList<>();
     }
 
     public void setTeacher(Teacher teacher) {
