@@ -32,6 +32,10 @@ public class University {
         return students.get(index);
     }
 
+    public int getNumberOfStudents() {
+        return students.size();
+    }
+
     public void addClass(Class course){
         classes.add(course);
     }
