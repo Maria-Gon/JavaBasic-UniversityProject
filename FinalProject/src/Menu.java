@@ -139,7 +139,7 @@ public class Menu {
         int index = 0;
         if (classInput.matches("^\\d+$")) {
             index = Integer.parseInt(classInput);
-            if(index > university.getNumberOfClasses()){
+            if(index > university.getNumberOfClasses() || index == 0){
                 System.out.println("Invalid number. Please try again");
                 return;
             }
@@ -172,7 +172,7 @@ public class Menu {
         int index = 0;
         if (classInput.matches("^\\d+$")) {
             index = Integer.parseInt(classInput);
-            if(index > university.getNumberOfClasses()){
+            if(index > university.getNumberOfClasses() || index == 0){
                 System.out.println("Invalid number. Please try again");
                 return;
             }
