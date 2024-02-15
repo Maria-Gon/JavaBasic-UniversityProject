@@ -41,6 +41,7 @@ public class Menu {
                     code++;
                     break;
                 case "4":
+                    option4();
                     break;
                 case "5":
                     option5();
@@ -191,6 +192,103 @@ public class Menu {
             System.out.println("Sorry the student is already in this class. Please try again");
         }
     }
+    private static void option4(){
+        //get the class info
+        System.out.println("Please enter the class name: ");
+        String name = scan.nextLine();
+        System.out.println("Please enter the class classroom (e.g. ML-2002): ");
+        String classroomInput = scan.nextLine();
+        String classroom;
+        if (classroomInput.matches("^[A-Z]{1,2}-\\d{4}$")) {
+            classroom = classroomInput;
+        }else {
+            System.out.println("Invalid classroom. Please try again");
+            return;
+        }
+        System.out.println("Please enter the class duration (in hours): ");
+        String durationInput = scan.nextLine();
+        int duration = 0;
+        if (durationInput.matches("^\\d")) {
+            duration = Integer.parseInt(durationInput);
+        } else {
+            System.out.println("Invalid duration. Please try again");
+            return;
+        }
+
+        Class course = new Class(name,classroom,duration);
+
+        //print all the teachers in the university
+        university.printAllTeachers();
+        System.out.println("Please enter the number corresponding to the teacher you want to add to the class:  ");
+        String teacherInput = scan.nextLine();
+        int index = 0;
+        if (teacherInput.matches("^\\d+$")) {
+            index = Integer.parseInt(teacherInput);
+            if(index > university.getNumberOfTeachers() || index == 0){
+                System.out.println("Invalid number. Please try again");
+                return;
+            }
+        } else {
+            System.out.println("Invalid number. Please try again");
+            return;
+        }
+
+        Teacher teacher = university.getTeacher(index-1);
+        if (teacher instanceof PartTimeTeacher){
+            int hours = ((PartTimeTeacher) teacher).getActiveHoursPerWeek();
+            ((PartTimeTeacher) teacher).setActiveHoursPerWeek(hours+duration);
+            double salary = ((PartTimeTeacher) teacher).calculateSalary();
+            teacher.setSalary(salary);
+        }
+        course.setTeacher(teacher);
+        System.out.println("The teacher was added correctly.");
+
+        //print all the students in the university
+        System.out.println("Please enter the number of students you wish to add to the class:  ");
+        String numStudentsInput = scan.nextLine();
+        index = 0;
+        if (numStudentsInput.matches("^\\d+$") ) {
+            index = Integer.parseInt(numStudentsInput);
+            if(index > university.getNumberOfStudents()){
+                System.out.println("Invalid number. Please try again");
+                removeHours(teacher,duration);
+                return;
+            }
+        } else {
+            System.out.println("Invalid number. Please try again");
+            removeHours(teacher,duration);
+            return;
+        }
+        university.printAllStudents();
+        int i = 0;
+        do {
+            System.out.println("Please enter the number corresponding to the student you want to add to the class:  ");
+            String studentInput = scan.nextLine();
+            int studentIndex = 0;
+            if (studentInput.matches("^\\d+$")) {
+                studentIndex = Integer.parseInt(studentInput);
+                if(studentIndex > university.getNumberOfStudents() || studentIndex == 0){
+                    System.out.println("Invalid number. Please try again");
+                    removeHours(teacher,duration);
+                    return;
+                }else if (course.validateStudentInClass(university.getStudent(studentIndex-1).getId())){
+                    System.out.println("Sorry the student is already in this class. Please try again");
+                    removeHours(teacher,duration);
+                    return;
+                }
+            } else {
+                System.out.println("Invalid number. Please try again");
+                removeHours(teacher,duration);
+                return;
+            }
+            Student student = university.getStudent(studentIndex-1);
+            course.addStudent(student);
+            i++;
+        }
+        while (i < index);
+        System.out.println("The students were added correctly.");
+        university.addClass(course);
+    }
     private static void option5(){
         System.out.println("Please enter the student id: ");
         String idInput = scan.nextLine();
@@ -202,5 +300,14 @@ public class Menu {
             return;
         }
         university.printClassesByStudent(id);
+    }
+
+    private static void removeHours(Teacher teacher, int duration){
+        if (teacher instanceof PartTimeTeacher){
+            int hours = ((PartTimeTeacher) teacher).getActiveHoursPerWeek();
+            ((PartTimeTeacher) teacher).setActiveHoursPerWeek(hours-duration);
+            double salary = ((PartTimeTeacher) teacher).calculateSalary();
+            teacher.setSalary(salary);
+        }
     }
 }
