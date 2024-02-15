@@ -20,12 +20,20 @@ public class University {
         return teachers.get(index);
     }
 
+    public int getNumberOfTeachers() {
+        return teachers.size();
+    }
+
     public void addStudent(Student student){
         students.add(student);
     }
 
     public Student getStudent(int index){
         return students.get(index);
+    }
+
+    public int getNumberOfStudents() {
+        return students.size();
     }
 
     public void addClass(Class course){
@@ -51,6 +59,17 @@ public class University {
             } else if (teacher instanceof PartTimeTeacher){
                 System.out.println("Active hours per week: " + ((PartTimeTeacher) teacher).getActiveHoursPerWeek());
             }
+            i++;
+        }
+        System.out.println("****************************************");
+    }
+
+    public void printAllStudents(){
+        System.out.println("****************************************");
+        int i = 1;
+        for(Student student : students){
+            System.out.println("\n"+ (i) + ". "+"Name: " + student.getName());
+            System.out.println("Id: " + student.getId());
             i++;
         }
         System.out.println("****************************************");
