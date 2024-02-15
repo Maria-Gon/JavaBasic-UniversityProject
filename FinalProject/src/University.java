@@ -20,6 +20,10 @@ public class University {
         return teachers.get(index);
     }
 
+    public int getNumberOfTeachers() {
+        return teachers.size();
+    }
+
     public void addStudent(Student student){
         students.add(student);
     }
