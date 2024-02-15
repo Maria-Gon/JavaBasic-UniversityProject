@@ -1,3 +1,11 @@
+package models.universities;
+
+import models.universities.classes.Class;
+import models.universities.students.Student;
+import models.universities.teachers.FullTimeTeacher;
+import models.universities.teachers.PartTimeTeacher;
+import models.universities.teachers.Teacher;
+
 import java.util.ArrayList;
 import java.util.List;
 
