@@ -1,3 +1,7 @@
+package models.universities.teachers;
+
+import utils.Salary;
+
 public class FullTimeTeacher extends Teacher implements Salary {
     private static final double multiplier = 1.1;
     private int yearsOfExperience;

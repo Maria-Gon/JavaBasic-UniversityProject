@@ -1,3 +1,12 @@
+package models.menus;
+
+import models.universities.classes.Class;
+import models.universities.students.Student;
+import models.universities.teachers.FullTimeTeacher;
+import models.universities.teachers.PartTimeTeacher;
+import models.universities.teachers.Teacher;
+import models.universities.University;
+
 import java.util.Scanner;
 
 public class Menu {

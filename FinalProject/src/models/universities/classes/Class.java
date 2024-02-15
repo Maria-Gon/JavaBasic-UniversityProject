@@ -1,3 +1,8 @@
+package models.universities.classes;
+
+import models.universities.students.Student;
+import models.universities.teachers.Teacher;
+
 import java.util.ArrayList;
 import java.util.List;
 

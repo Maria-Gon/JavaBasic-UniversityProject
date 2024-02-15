@@ -1,3 +1,7 @@
+package models.universities.teachers;
+
+import utils.Salary;
+
 public class PartTimeTeacher extends Teacher implements Salary{
     private int activeHoursPerWeek;
     private static final double weeks = 4.4;
