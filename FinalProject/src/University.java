@@ -60,7 +60,7 @@ public class University {
         System.out.println("****************************************");
         int i = 1;
         for(Class course : classes){
-            System.out.println("\n"+ (i) + ". "+"Name: " + course.getName());
+            System.out.println("\n"+ (i) + ". " + course.getName());
             i++;
         }
         System.out.println("****************************************");
