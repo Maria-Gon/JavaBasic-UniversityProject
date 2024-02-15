@@ -171,7 +171,7 @@ public class Menu {
         int index = 0;
         if (classInput.matches("^\\d+$")) {
             index = Integer.parseInt(classInput);
-            if(index >= university.getNumberOfClasses()){
+            if(index > university.getNumberOfClasses()){
                 System.out.println("Invalid number. Please try again");
                 return;
             }
@@ -180,7 +180,7 @@ public class Menu {
             return;
         }
 
-        Class course = university.getClass(index);
+        Class course = university.getClass(index-1);
 
         //Validate if student is in the class
         boolean isInClass = course.validateStudentInClass(student.getId());
