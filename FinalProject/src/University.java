@@ -56,6 +56,34 @@ public class University {
         System.out.println("****************************************");
     }
 
+    public void printClassesName(){
+        System.out.println("****************************************");
+        int i = 1;
+        for(Class course : classes){
+            System.out.println("\n"+ (i) + ". " + course.getName());
+            i++;
+        }
+        System.out.println("****************************************");
+    }
+
+    public void printClassInfo(int index){
+        System.out.println("****************************************");
+        System.out.println("\nName: " + classes.get(index).getName());
+        System.out.println("Classroom: " + classes.get(index).getClassroom());
+        System.out.println("Duration: " + classes.get(index).getDuration());
+        System.out.println("Teacher: \n");
+        System.out.println("    Name: " + classes.get(index).getTeacher().getName());
+        System.out.println("    Salary: " + classes.get(index).getTeacher().getSalary());
+        if (classes.get(index).getTeacher() instanceof FullTimeTeacher){
+            System.out.println("    Years of experience: " + ((FullTimeTeacher) classes.get(index).getTeacher()).getYearsOfExperience());
+        } else if (classes.get(index).getTeacher() instanceof PartTimeTeacher){
+            System.out.println("    Active hours per week: " + ((PartTimeTeacher) classes.get(index).getTeacher()).getActiveHoursPerWeek());
+        }
+        System.out.println("\nStudents: ");
+        classes.get(index).printStudentsInClass();
+        System.out.println("****************************************");
+    }
+
     public void printAllClasses(){
         System.out.println("****************************************");
         int i = 1;

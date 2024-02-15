@@ -34,6 +34,7 @@ public class Menu {
                     option1();
                     break;
                 case "2":
+                    option2();
                     break;
                 case "3":
                     option3(code);
@@ -130,7 +131,23 @@ public class Menu {
     private static void option1(){
         university.printAllTeachers();
     }
-
+    private static void option2() {
+        university.printClassesName();
+        System.out.println("Please enter the number corresponding to the class:  ");
+        String classInput = scan.nextLine();
+        int index = 0;
+        if (classInput.matches("^\\d+$")) {
+            index = Integer.parseInt(classInput);
+            if(index > university.getNumberOfClasses()){
+                System.out.println("Invalid number. Please try again");
+                return;
+            }
+        } else {
+            System.out.println("Invalid number. Please try again");
+            return;
+        }
+        university.printClassInfo(index-1);
+    }
     private static void option3(int code) {
         //get the student info
         System.out.println("Please enter the student name: ");
