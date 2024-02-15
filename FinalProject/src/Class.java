@@ -23,6 +23,14 @@ public class Class {
         students.add(student);
     }
 
+    public void printStudentsInClass() {
+        for (Student student : students){
+            System.out.println("\n    ID: " +student.getId());
+            System.out.println("    Name: " +student.getName());
+            System.out.println("    Age: " +student.getAge());
+        }
+    }
+
     public boolean validateStudentInClass (int id) {
         for (Student student : students) {
             if (student.getId() == id) {
